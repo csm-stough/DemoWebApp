@@ -1,0 +1,21 @@
+﻿@model DemoWebApp.Models.BottlesModel
+
+<tr>
+    <td>
+        @Html.DisplayFor(item => Model.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(item => Model.NumberOfBottles)
+    </td>
+    <td>
+        @Html.DisplayFor(item => Model.Date)
+    </td>
+    <td>
+        <a button type="button" class="btn btn-primary" style="width: fit-content" onclick="location.href='@Url.Action("Edit", "Home", new { @Model.Id })'">
+            Edit
+        </a>
+        <a button type="button" class="btn btn-danger" style="width: fit-content" onclick="location.href='@Url.Action("Delete", "Home", new { @Model.Id })'">
+            Delete
+        </a>
+    </td>
+</tr>
